@@ -187,6 +187,7 @@
 
  <!-- ====== start navbar ====== -->
 
+    
  <nav class="navbar navbar-expand-lg navbar-light style-1">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -197,19 +198,13 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse mx-md-5" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active " href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link  " href="aboutus.html">About us</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
-                <li class="nav-item"><a class="nav-link " href="portfolio.html">Portfolio</a>
-                </li>
-
-
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle " id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false"href="our_services">
+                        aria-expanded="false">
                         Services
                     </a> 
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
@@ -238,11 +233,20 @@
                                 Production</a></li>
                     </ul> 
                 </li>
-                <li class="nav-item"><a class="nav-link " href="payments.html">Payment</a></li>
-                 <li class="nav-item"><a class="nav-link " href="career.html">Career</a>
-
+              </li>
+                <li class="nav-item"><a class="nav-link" href="Contact-us.html">Contact Us</a>
                 </li>
-                <li class="nav-item"><a class="nav-link " href="Contact-us.html">Contact Us</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false"href="our_services">
+                        More
+                    </a> 
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <li><a class="dropdown-item" href="career.html">Career</a></li>
+                        <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="dropdown-item" href="aboutus.html">About us</a></li>
+                        <li><a class="dropdown-item" href="refundpolicy.html">Refund Policy</a></li>
+                    </ul> 
                 </li>
             </ul>
             <div class="nav-side">
@@ -602,27 +606,21 @@
                             </div>
                         </div>
                         <div class="col-lg-6 offset-lg-1">
-                            <form class="contact_form" action="https://WPbx9m46zkL0.com/request" method="post">
+                            <form class="contact_form" id="contactForm">
                                 <div class="row gx-3">
                                     <div class="col-lg-6">
-                                        <div class="form-group mb-3 wow fadeInUp"
-                                            style="visibility: visible; animation-name: fadeInUp;">
-                                            <input type="text" name="name" class="form-control" placeholder="Name *"
-                                                required="">
+                                        <div class="form-group mb-3 wow fadeInUp">
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="Name *" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
-                                        <div class="form-group mb-3 wow fadeInUp"
-                                            style="visibility: visible; animation-name: fadeInUp;">
-                                            <input type="email" name="email" class="form-control"
-                                                placeholder="Email Address *" required="">
+                                        <div class="form-group mb-3 wow fadeInUp">
+                                            <input type="email" name="email" id="email" class="form-control" placeholder="Email Address *" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="form-group mb-3 wow fadeInUp"
-                                            style="visibility: visible; animation-name: fadeInUp;">
-                                            <select name="inquiry_option" class="form-select"
-                                                aria-label="Default select example" required="">
+                                        <div class="form-group mb-3 wow fadeInUp">
+                                            <select name="inquiry_option" id="subject" class="form-select" required>
                                                 <option value="">Your inquiry about</option>
                                                 <option value="service">Service</option>
                                                 <option value="product">Product</option>
@@ -631,29 +629,82 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="form-group mb-3 wow fadeInUp"
-                                            style="visibility: visible; animation-name: fadeInUp;">
-                                            <textarea class="form-control" name="message" rows="4"
-                                                placeholder="Write your inquiry here" required=""></textarea>
+                                        <div class="form-group mb-3 wow fadeInUp">
+                                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
-                                        <div class="form-check mb-4 wow fadeInUp"
-                                            style="visibility: visible; animation-name: fadeInUp;">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault" required="">
-                                            <label class="form-check-label text-light small" for="flexCheckDefault">
-                                                By submitting, i’m agreed to the <a
-                                                    href="https://WPbx9m46zkL0.com/termscondition"
-                                                    class="text-decoration-underline">Terms &amp; Conditons</a>
+                                        <div class="form-group mb-3 wow fadeInUp">
+                                            <textarea class="form-control" name="message" id="message" rows="4" placeholder="Write your inquiry here" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-check mb-4 wow fadeInUp d-flex w-100">
+                                            <input class="form-check-input me-1" type="checkbox" id="termsCheck" required>
+                                            <label class="form-check-label text-light small" for="termsCheck">
+                                                By submitting, I agree to the <a href="/termscondition.html" class="text-decoration-underline">Terms & Conditions</a>
                                             </label>
+                                            <p class="text-success text-end mx-3 d-none" id="success" >Submitted successfully!</p> 
+                                            <p class="text-warning text-end mx-3 d-none" id="notsuccess" >Submitted successfully!</p> 
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <input type="submit" value="Request Now" class="btn btn-outline-light mt-3 sm-butn wow fadeInUp slow mango-btn">
                                     </div>
+                                    
                                 </div>
                             </form>
+                        
+                            <script>
+                                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                                    event.preventDefault(); 
+                                
+                                    var name = document.getElementById('name').value;
+                                    var email = document.getElementById('email').value;
+                                    var subject = document.getElementById('subject').value;
+                                    var phone = document.getElementById('phone').value;
+                                    var message = document.getElementById('message').value + " Subject: " + subject + " Phone: " + phone;
+                                
+                                    var formData = {
+                                        name: name,
+                                        email: email,
+                                        message: message
+                                    };
+                                
+                                    fetch("https://visioncodebackend.onrender.com/send", {
+                                        method: "POST",
+                                        headers: {
+                                            "Content-Type": "application/json"
+                                        },
+                                        body: JSON.stringify(formData)
+                                    })
+                                    .then(response => {
+                                        if (response.ok) {
+                                            return response.json();
+                                        } else {
+                                            throw new Error('Network response was not ok.');
+                                        }
+                                    })
+                                    .then(data => {
+                                        if (data.status === "success") {
+                                            document.getElementById('success').classList.remove('d-none');
+                                            document.getElementById('notsuccess').classList.add('d-none');
+                                            alert("Message sent successfully!");
+                                        } else {
+                                            document.getElementById('notsuccess').classList.remove('d-none');
+                                            document.getElementById('success').classList.add('d-none');
+                                            alert("Failed to send message. Please try again later.");
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error:', error);
+                                        document.getElementById('notsuccess').classList.remove('d-none');
+                                        document.getElementById('success').classList.add('d-none');
+                                        alert("An error occurred. Please try again later.");
+                                    });
+                                });
+                                </script>
+                                
                         </div>
                     </div>
                 </div>
